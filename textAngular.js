@@ -11,7 +11,7 @@ See README.md or http://github.com/fraywing/textangular for requirements and use
 var textAngular = angular.module("textAngular", ['ngSanitize']); //This makes ngSanitize required
 
 textAngular.directive("textAngular", ['$compile', '$window', '$document', '$rootScope', '$timeout', 'taFixChrome', function($compile, $window, $document, $rootScope, $timeout, taFixChrome) {
-	console.log("Thank you for using textAngular! http://www.textangular.com")
+	if (console) console.log("Thank you for using textAngular! http://www.textangular.com");
 	// deepExtend instead of angular.extend in order to allow easy customization of "display" for default buttons
 	// snatched from: http://stackoverflow.com/a/15311794/2966847
 	function deepExtend(destination, source) {
